@@ -1,1 +1,1039 @@
-{"openapi":"3.1.0","info":{"title":"OpenAPI definition","version":"v0"},"servers":[{"url":"http://localhost:8081","description":"Generated server url"}],"paths":{"/simulationJob.html":{"post":{"tags":["job-launcher-controller"],"operationId":"simulationJob","responses":{"200":{"description":"OK"}}}},"/isJobExecuted":{"get":{"tags":["job-launcher-controller"],"operationId":"isJobExecuted","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"boolean"}}}}}}},"/getVariazioneValoriParametriAmbiente":{"get":{"tags":["dati-ambiente-controller"],"operationId":"getVariazioneValoriParametriAmbiente","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"array","items":{"$ref":"#/components/schemas/VariazioneValoriParametriAmbienteDTO"}}}}}}}}},"/getListaParametriAmbiente":{"get":{"tags":["dati-ambiente-controller"],"operationId":"getListaParametriAmbiente","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"type":"string"}}}}}}}},"/findProduzioneQuantitaJoinColtura":{"get":{"tags":["dati-produzione-controller"],"operationId":"findProduzioneQuantitaJoinColtura","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"$ref":"#/components/schemas/ProduzioneColturaDTO"}}}}}}}}},"/findProduzioneParticellaColturaOrtaggio":{"get":{"tags":["dati-produzione-controller"],"operationId":"findProduzioneParticellaColturaOrtaggio","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"$ref":"#/components/schemas/ProduzioneParticellaColturaOrtaggioDTO"}}}}}}}},"/findProduzioneJoinColturaTempi":{"get":{"tags":["dati-produzione-controller"],"operationId":"findProduzioneJoinColturaTempi","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"array","items":{"$ref":"#/components/schemas/ProduzioneColturaTempiDTO"}}}}}}}}},"/findPrezziAndDateRaccoltoColtura":{"get":{"tags":["dati-coltura-controller"],"operationId":"findPrezziAndDateColtura","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"$ref":"#/components/schemas/ColturaListPrezzoDataRaccoltoDTO"}}}}}}}},"/findParticellaJoinColturaTerreno":{"get":{"tags":["dati-particella-controller"],"operationId":"findParticellaJoinColturaTerreno","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"array","items":{"$ref":"#/components/schemas/ParticellaColturaTerrenoDTO"}}}}}}}}},"/findFatturatoRicaviSpese":{"get":{"tags":["dati-fatturato-controller"],"operationId":"findFatturatoRicaviSpese","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"array","items":{"$ref":"#/components/schemas/FatturatoRicaviSpeseDTO"}}}}}}}}},"/findColturaConsumoIdrico":{"get":{"tags":["dati-coltura-controller"],"operationId":"findColturaConsumoIdrico","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/ColturaConsumoIdricoDTO"}}}}}}}},"/findAzienda":{"get":{"tags":["dati-azienda-controller"],"operationId":"findAzienda","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/AziendaDTO"}}}}}}},"/findAllRilevazioneTerrenoSortById":{"get":{"tags":["dati-rilevazione-terreno-controller"],"operationId":"findAllRilevazioneTerrenoSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/TerrenoDTO"}}}}}}}},"/findAllProduzioneSortById":{"get":{"tags":["dati-produzione-controller"],"operationId":"findAllProduzioneSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/ProduzioneDTO"}}}}}}}},"/findAllParticellaSortById":{"get":{"tags":["dati-particella-controller"],"operationId":"findAllParticellaSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/DatiParticellaDTO"}}}}}}}},"/findAllOrtaggioSortById":{"get":{"tags":["dati-ortaggio-controller"],"operationId":"findAllOrtaggioSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/OrtaggioDTO"}}}}}}}},"/findAllOrtaggioRangeStagione":{"get":{"tags":["dati-ortaggio-controller"],"operationId":"findAllOrtaggioRangeStagione","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/OrtaggioRangeStagioneSumDTO"}}}}}}}},"/findAllFatturatoSortById":{"get":{"tags":["dati-fatturato-controller"],"operationId":"findAllFatturatoSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/FatturatoDTO"}}}}}}}},"/findAllColturaSortById":{"get":{"tags":["dati-coltura-controller"],"operationId":"findAllColturaSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/ColturaDTO"}}}}}}}},"/findAllAmbienteSortById":{"get":{"tags":["dati-ambiente-controller"],"operationId":"findAllAmbienteSortById","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/AmbienteDTO"}}}}}}}},"/countOrtaggioColtura":{"get":{"tags":["dati-coltura-controller"],"operationId":"countOrtaggioColtura","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"integer","format":"int64"}}}}}}}},"/countFamigliaOrtaggioColtura":{"get":{"tags":["dati-coltura-controller"],"operationId":"countFamigliaOrtaggioColtura","responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"integer","format":"int64"}}}}}}}}},"components":{"schemas":{"VariazioneValoriParametriAmbienteDTO":{"type":"object","properties":{"valoreParametro":{"type":"number"},"dataRilevazione":{"type":"string","format":"date"},"variazionePercentuale":{"type":"number"}}},"ProduzioneColturaDTO":{"type":"object","properties":{"quantitaRaccolto":{"type":"number"},"quantitaRaccoltoVenduto":{"type":"number"},"quantitaRaccoltoMarcio":{"type":"number"},"quantitaRaccoltoTerzi":{"type":"number"},"fatturatoRaccolto":{"type":"number"}}},"ProduzioneParticellaColturaOrtaggioDTO":{"type":"object","properties":{"prodottoColtivato":{"type":"string"},"dataRaccolto":{"type":"string","format":"date"},"idParticella":{"type":"integer","format":"int64"},"estensioneTerreno":{"type":"number"},"pendenza":{"type":"number"},"esposizione":{"type":"string"},"litologia":{"type":"string"}}},"ProduzioneColturaTempiDTO":{"type":"object","properties":{"prodottoColtivato":{"type":"string"},"listMedieTempi":{"type":"array","items":{"type":"number","format":"double"}}}},"ColturaListPrezzoDataRaccoltoDTO":{"type":"object","properties":{"prezzoKgList":{"type":"array","items":{"type":"number"}},"dataRaccoltoList":{"type":"array","items":{"type":"string","format":"date"}}}},"ParticellaColturaTerrenoDTO":{"type":"object","properties":{"prodottoColtivato":{"type":"string"},"dateRilevazione":{"type":"array","items":{"type":"string","format":"date"}},"idColtura":{"type":"integer","format":"int64"}}},"FatturatoRicaviSpeseDTO":{"type":"object","properties":{"annoRiferimento":{"type":"string"},"ricaviVendita":{"type":"number"},"speseGenerali":{"type":"number"}}},"ColturaConsumoIdricoDTO":{"type":"object","properties":{"idColtura":{"type":"integer","format":"int64"},"dataRaccolto":{"type":"string","format":"date"},"nome":{"type":"string"},"consumoIdrico":{"type":"number"},"consumoIdricoMedio":{"type":"number"}}},"AziendaDTO":{"type":"object","properties":{"ragioneSociale":{"type":"string"},"annoFondazione":{"type":"string"},"tipologia":{"type":"string"},"ateco":{"type":"string"},"numDipendenti":{"type":"integer","format":"int64"}}},"TerrenoDTO":{"type":"object","properties":{"idRilevazioneTerreno":{"type":"integer","format":"int64"},"phSuolo":{"type":"number"},"umidita":{"type":"number"},"capacitaAssorbente":{"type":"number"},"porosita":{"type":"number"},"temperatura":{"type":"number"},"dataRilevazione":{"type":"string","format":"date"},"idParticellaParticella":{"type":"integer","format":"int64"}}},"ProduzioneDTO":{"type":"object","properties":{"idProduzione":{"type":"integer","format":"int64"},"quantitaRaccolto":{"type":"number"},"quantitaRaccoltoVenduto":{"type":"number"},"quantitaRaccoltoMarcio":{"type":"number"},"quantitaRaccoltoTerzi":{"type":"number"},"fatturatoRaccolto":{"type":"number"},"consumoIdrico":{"type":"number"},"numLavoratori":{"type":"integer","format":"int32"},"speseProduzione":{"type":"number"},"idColturaColtura":{"type":"integer","format":"int64"}}},"DatiParticellaDTO":{"type":"object","properties":{"idParticella":{"type":"integer","format":"int64"},"comune":{"type":"string"},"foglio":{"type":"string"},"qualita":{"type":"string"},"annoInstallazione":{"type":"string"},"esposizione":{"type":"string"},"costo":{"type":"number"},"estensione":{"type":"number"},"pendenza":{"type":"number"},"tipologiaLitologia":{"type":"string"}}},"OrtaggioDTO":{"type":"object","properties":{"idOrtaggio":{"type":"integer","format":"int64"},"nome":{"type":"string"},"descrizione":{"type":"string"},"giorniSemina":{"type":"integer","format":"int32"},"giorniGerminazione":{"type":"integer","format":"int32"},"giorniTrapianto":{"type":"integer","format":"int32"},"giorniMaturazione":{"type":"integer","format":"int32"},"giorniRaccolta":{"type":"integer","format":"int32"},"pesoMedio":{"type":"number"},"volumeMq":{"type":"number"},"idFamiglia":{"type":"integer","format":"int64"},"idRangeStagione":{"type":"integer","format":"int64"}}},"OrtaggioRangeStagioneSumDTO":{"type":"object","properties":{"idOrtaggio":{"type":"integer","format":"int64"},"giorniSeminaRaccolto":{"type":"integer","format":"int32"},"pesoMedio":{"type":"number"},"volumeMq":{"type":"number"},"meseSeminaMin":{"type":"string"},"meseSeminaMax":{"type":"string"}}},"FatturatoDTO":{"type":"object","properties":{"idFatturato":{"type":"integer","format":"int64"},"annoRiferimento":{"type":"string"},"ricaviVendita":{"type":"number"},"speseGenerali":{"type":"number"},"interessiAttivi":{"type":"number"},"interessiPassivi":{"type":"number"},"idParticellaParticella":{"type":"integer","format":"int64"}}},"ColturaDTO":{"type":"object","properties":{"idColtura":{"type":"integer","format":"int64"},"prezzoKg":{"type":"number"},"dataSemina":{"type":"string","format":"date"},"dataRaccolto":{"type":"string","format":"date"},"nomeOrtaggio":{"type":"string"}}},"AmbienteDTO":{"type":"object","properties":{"idAmbiente":{"type":"integer","format":"int64"},"temperaturaMedia":{"type":"number"},"umiditaMedia":{"type":"number"},"precipitazioni":{"type":"number"},"irraggiamentoMedio":{"type":"number"},"ombreggiamentoMedio":{"type":"number"},"dataRilevazione":{"type":"string","format":"date"}}}}}}
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8081",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Dati Ortaggio Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi agli Ortaggi"
+    },
+    {
+      "name": "Dati Coltura Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi alle Colture"
+    },
+    {
+      "name": "Dati Fatturato Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi al Fatturato"
+    },
+    {
+      "name": "Dati Particella Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi alle Particelle"
+    },
+    {
+      "name": "Dati Produzione Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi alle Produzioni"
+    },
+    {
+      "name": "Job Launcher Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per funzionalità riguardanti i Job"
+    },
+    {
+      "name": "Dati Ambiente Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi alle rilevazioni Ambientali"
+    },
+    {
+      "name": "Dati Azienda Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi all'Azienda"
+    },
+    {
+      "name": "Dati Rilevazione Terreno Controller",
+      "description": "Client API servizi Rest esposti da Agriflux-Batch per i dati relativi alle Rilevazioni Morfologiche"
+    }
+  ],
+  "paths": {
+    "/simulationJob.html": {
+      "post": {
+        "tags": [
+          "Job Launcher Controller"
+        ],
+        "summary": "Esecuzione Job di Simulazione",
+        "description": "Chiamata POST per l'avvio del Job di Simulazione",
+        "operationId": "simulationJob",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/isJobExecuted": {
+      "get": {
+        "tags": [
+          "Job Launcher Controller"
+        ],
+        "summary": "Servizio di Audit per l'esecuzione del Job",
+        "description": "Restituisce true se esiste almeno una istanza di un Job a db, false altrimenti",
+        "operationId": "isJobExecuted",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getVariazioneValoriParametriAmbiente": {
+      "get": {
+        "tags": [
+          "Dati Ambiente Controller"
+        ],
+        "summary": "Mostra una mappa con la variazione dei parametri ambientali nel corso del tempo",
+        "description": "Restituisce una mappa con in chiave il nome del parametro ambientale e come valore una lista di oggetti contenenti il valore del parametro, la data di rilevazione ambientale e la variazione percentuale rispetto all'anno precedente",
+        "operationId": "getVariazioneValoriParametriAmbiente",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/VariazioneValoriParametriAmbienteDTO"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getListaParametriAmbiente": {
+      "get": {
+        "tags": [
+          "Dati Ambiente Controller"
+        ],
+        "summary": "Recupera la lista dei parametri Ambientali",
+        "description": "Restituisce la lista dei nomi dei parametri Ambientali calcolati",
+        "operationId": "getListaParametriAmbiente",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findProduzioneQuantitaJoinColtura": {
+      "get": {
+        "tags": [
+          "Dati Produzione Controller"
+        ],
+        "summary": "Mostra una mappa delle quantita' di raccolto prodotte e del fatturato raggruppate per nome ortaggio e anno di riferimento",
+        "description": "Restituisce una mappa in cui la chiave è il nome dell'Ortaggio e il valore è un mappa  con in chiave l'anno di riferimento e come valore un oggetto contenente le quantità di raccolto prodotte ed il fatturato",
+        "operationId": "findProduzioneQuantitaJoinColtura",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/ProduzioneColturaDTO"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findProduzioneParticellaColturaOrtaggio": {
+      "get": {
+        "tags": [
+          "Dati Produzione Controller"
+        ],
+        "summary": "Mostra una mappa dei dati relativi alla Particella e al prodotto coltivato raggruppati per Produzione",
+        "description": "Restituisce una mappa in cui la chiave è la Produzione e il valore è un oggetto  contenente i dati relativi alla Particella e al prodotto coltivato riferito a quella Produzione",
+        "operationId": "findProduzioneParticellaColturaOrtaggio",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/ProduzioneParticellaColturaOrtaggioDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findProduzioneJoinColturaTempi": {
+      "get": {
+        "tags": [
+          "Dati Produzione Controller"
+        ],
+        "summary": "Mostra una mappa della lista dei tempi medi da semina a raccolto delle singole Colture per anno di riferimento",
+        "description": "Restituisce una mappa in cui la chiave è l'anno di riferimento e il valore è una lista  di oggetti contenenti il prodotto coltivato e la lista delle medie dei tempi da semina a raccolto",
+        "operationId": "findProduzioneJoinColturaTempi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProduzioneColturaTempiDTO"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findPrezziAndDateRaccoltoColtura": {
+      "get": {
+        "tags": [
+          "Dati Coltura Controller"
+        ],
+        "summary": "Mostra la lista di prezzi e date raccolto relative alle singole Colture",
+        "description": "Restituisce una mappa in cui la chiave è la Coltura e il valore è un oggetto contenente la lista di Date Raccolto e Prezzo al Kg relativi a quella Coltura",
+        "operationId": "findPrezziAndDateColtura",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/ColturaListPrezzoDataRaccoltoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findParticellaJoinColturaTerreno": {
+      "get": {
+        "tags": [
+          "Dati Particella Controller"
+        ],
+        "summary": "Recupera alcuni dati relativi a Coltura e Rilevazione Terreno raggruppandoli per Particella",
+        "description": "Restituisce una mappa che ha come chiave l'id della Particella e come valore una lista di DTO che contengono l'id della Coltura, il prodotto coltivato e la lista di date rilevazioni associate a quella Coltura su quella Particella",
+        "operationId": "findParticellaJoinColturaTerreno",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ParticellaColturaTerrenoDTO"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findFatturatoRicaviSpese": {
+      "get": {
+        "tags": [
+          "Dati Fatturato Controller"
+        ],
+        "summary": "Mostra una mappa dei dati relativi al Fatturato di ogni Particella anno per anno",
+        "description": "Restituisce una mappa con in chiave l'id della Particella e come valore una lista di oggetti contenenti l'anno di riferimento del fatturato, i ricavi e i costi di spesa della particella",
+        "operationId": "findFatturatoRicaviSpese",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/FatturatoRicaviSpeseDTO"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findColturaConsumoIdrico": {
+      "get": {
+        "tags": [
+          "Dati Coltura Controller"
+        ],
+        "summary": "Mostra la lista relativa al consumo idrico per singola Coltura",
+        "description": "Restituisce una lista di DTo contenenti l'id della Coltura, la data di raccolto, il nome dell'Ortaggio, il consumo idrico di quella produzione e il consumo idrico medio relativo a quell'ortaggio",
+        "operationId": "findColturaConsumoIdrico",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ColturaConsumoIdricoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAzienda": {
+      "get": {
+        "tags": [
+          "Dati Azienda Controller"
+        ],
+        "summary": "Recupera i dati Aziendali",
+        "description": "Restituisce un DTO contenente i dati Aziendali",
+        "operationId": "findAzienda",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AziendaDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllRilevazioneTerrenoSortById": {
+      "get": {
+        "tags": [
+          "Dati Rilevazione Terreno Controller"
+        ],
+        "summary": "Recupera tutte le Rilevazioni effettuate sulle Particelle",
+        "description": "Restituisce una lista di Rilevazioni del Terreno",
+        "operationId": "findAllRilevazioneTerrenoSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TerrenoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllProduzioneSortById": {
+      "get": {
+        "tags": [
+          "Dati Produzione Controller"
+        ],
+        "summary": "Recupera tutti i dati relativi alle Produzioni",
+        "description": "Restituisce una lista di Produzioni",
+        "operationId": "findAllProduzioneSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProduzioneDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllParticellaSortById": {
+      "get": {
+        "tags": [
+          "Dati Particella Controller"
+        ],
+        "summary": "Recupera tutte le Particelle",
+        "description": "Restituisce una lista di Particelle",
+        "operationId": "findAllParticellaSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DatiParticellaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllOrtaggioSortById": {
+      "get": {
+        "tags": [
+          "Dati Ortaggio Controller"
+        ],
+        "summary": "Recupera i dati relativi agli Ortaggi",
+        "description": "Restituisce una lista di DTO contenenti i dati relativi agli Ortaggi",
+        "operationId": "findAllOrtaggioSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrtaggioDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllOrtaggioRangeStagione": {
+      "get": {
+        "tags": [
+          "Dati Ortaggio Controller"
+        ],
+        "summary": "Recupera i dati relativi agli Ortaggi con i mesi minimo e massimo per la semina",
+        "description": "Restituisce una lista di DTO contenenti i dati relativi agli Ortaggi con i mesi minimo e massimo per la semina per il singolo Ortaggio",
+        "operationId": "findAllOrtaggioRangeStagione",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrtaggioRangeStagioneSumDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllFatturatoSortById": {
+      "get": {
+        "tags": [
+          "Dati Fatturato Controller"
+        ],
+        "summary": "Recupera i dati relativi al Fatturato",
+        "description": "Restituisce una lista di DTO contenenti i dati relativi al Fatturato",
+        "operationId": "findAllFatturatoSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FatturatoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllColturaSortById": {
+      "get": {
+        "tags": [
+          "Dati Coltura Controller"
+        ],
+        "summary": "Recupera tutte le Colture coltivate",
+        "description": "Restituisce una lista di colture",
+        "operationId": "findAllColturaSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ColturaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findAllAmbienteSortById": {
+      "get": {
+        "tags": [
+          "Dati Ambiente Controller"
+        ],
+        "summary": "Recupera tutti i dati Ambientali",
+        "description": "Restituisce una lista di dati Ambientali",
+        "operationId": "findAllAmbienteSortById",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AmbienteDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/countOrtaggioColtura": {
+      "get": {
+        "tags": [
+          "Dati Coltura Controller"
+        ],
+        "summary": "Conta le Colture raggruppate per nome Ortaggio",
+        "description": "Restituisce una mappa in cui la chiave è il tipo di Ortaggio e il valore è il numero di occorrenze trovate",
+        "operationId": "countOrtaggioColtura",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/countFamigliaOrtaggioColtura": {
+      "get": {
+        "tags": [
+          "Dati Coltura Controller"
+        ],
+        "summary": "Conta le Colture raggruppate per Famiglia di Ortaggio",
+        "description": "Restituisce una mappa in cui la chiave è la Famiglia associata a quell'Ortaggio e il valore è il numero di occorrenze trovate",
+        "operationId": "countFamigliaOrtaggioColtura",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VariazioneValoriParametriAmbienteDTO": {
+        "type": "object",
+        "properties": {
+          "valoreParametro": {
+            "type": "number"
+          },
+          "dataRilevazione": {
+            "type": "string",
+            "format": "date"
+          },
+          "variazionePercentuale": {
+            "type": "number"
+          }
+        }
+      },
+      "ProduzioneColturaDTO": {
+        "type": "object",
+        "properties": {
+          "quantitaRaccolto": {
+            "type": "number"
+          },
+          "quantitaRaccoltoVenduto": {
+            "type": "number"
+          },
+          "quantitaRaccoltoMarcio": {
+            "type": "number"
+          },
+          "quantitaRaccoltoTerzi": {
+            "type": "number"
+          },
+          "fatturatoRaccolto": {
+            "type": "number"
+          }
+        }
+      },
+      "ProduzioneParticellaColturaOrtaggioDTO": {
+        "type": "object",
+        "properties": {
+          "prodottoColtivato": {
+            "type": "string"
+          },
+          "dataRaccolto": {
+            "type": "string",
+            "format": "date"
+          },
+          "idParticella": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "estensioneTerreno": {
+            "type": "number"
+          },
+          "pendenza": {
+            "type": "number"
+          },
+          "esposizione": {
+            "type": "string"
+          },
+          "litologia": {
+            "type": "string"
+          }
+        }
+      },
+      "ProduzioneColturaTempiDTO": {
+        "type": "object",
+        "properties": {
+          "prodottoColtivato": {
+            "type": "string"
+          },
+          "listMedieTempi": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        }
+      },
+      "ColturaListPrezzoDataRaccoltoDTO": {
+        "type": "object",
+        "properties": {
+          "prezzoKgList": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "dataRaccoltoList": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      },
+      "ParticellaColturaTerrenoDTO": {
+        "type": "object",
+        "properties": {
+          "prodottoColtivato": {
+            "type": "string"
+          },
+          "dateRilevazione": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "idColtura": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "FatturatoRicaviSpeseDTO": {
+        "type": "object",
+        "properties": {
+          "annoRiferimento": {
+            "type": "string"
+          },
+          "ricaviVendita": {
+            "type": "number"
+          },
+          "speseGenerali": {
+            "type": "number"
+          }
+        }
+      },
+      "ColturaConsumoIdricoDTO": {
+        "type": "object",
+        "properties": {
+          "idColtura": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "dataRaccolto": {
+            "type": "string",
+            "format": "date"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "consumoIdrico": {
+            "type": "number"
+          },
+          "consumoIdricoMedio": {
+            "type": "number"
+          }
+        }
+      },
+      "AziendaDTO": {
+        "type": "object",
+        "properties": {
+          "ragioneSociale": {
+            "type": "string"
+          },
+          "annoFondazione": {
+            "type": "string"
+          },
+          "tipologia": {
+            "type": "string"
+          },
+          "ateco": {
+            "type": "string"
+          },
+          "numDipendenti": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "TerrenoDTO": {
+        "type": "object",
+        "properties": {
+          "idRilevazioneTerreno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "phSuolo": {
+            "type": "number"
+          },
+          "umidita": {
+            "type": "number"
+          },
+          "capacitaAssorbente": {
+            "type": "number"
+          },
+          "porosita": {
+            "type": "number"
+          },
+          "temperatura": {
+            "type": "number"
+          },
+          "dataRilevazione": {
+            "type": "string",
+            "format": "date"
+          },
+          "idParticellaParticella": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ProduzioneDTO": {
+        "type": "object",
+        "properties": {
+          "idProduzione": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "quantitaRaccolto": {
+            "type": "number"
+          },
+          "quantitaRaccoltoVenduto": {
+            "type": "number"
+          },
+          "quantitaRaccoltoMarcio": {
+            "type": "number"
+          },
+          "quantitaRaccoltoTerzi": {
+            "type": "number"
+          },
+          "fatturatoRaccolto": {
+            "type": "number"
+          },
+          "consumoIdrico": {
+            "type": "number"
+          },
+          "numLavoratori": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "speseProduzione": {
+            "type": "number"
+          },
+          "idColturaColtura": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "DatiParticellaDTO": {
+        "type": "object",
+        "properties": {
+          "idParticella": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "comune": {
+            "type": "string"
+          },
+          "foglio": {
+            "type": "string"
+          },
+          "qualita": {
+            "type": "string"
+          },
+          "annoInstallazione": {
+            "type": "string"
+          },
+          "esposizione": {
+            "type": "string"
+          },
+          "costo": {
+            "type": "number"
+          },
+          "estensione": {
+            "type": "number"
+          },
+          "pendenza": {
+            "type": "number"
+          },
+          "tipologiaLitologia": {
+            "type": "string"
+          }
+        }
+      },
+      "OrtaggioDTO": {
+        "type": "object",
+        "properties": {
+          "idOrtaggio": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "descrizione": {
+            "type": "string"
+          },
+          "giorniSemina": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "giorniGerminazione": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "giorniTrapianto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "giorniMaturazione": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "giorniRaccolta": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pesoMedio": {
+            "type": "number"
+          },
+          "volumeMq": {
+            "type": "number"
+          },
+          "idFamiglia": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idRangeStagione": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "OrtaggioRangeStagioneSumDTO": {
+        "type": "object",
+        "properties": {
+          "idOrtaggio": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "giorniSeminaRaccolto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pesoMedio": {
+            "type": "number"
+          },
+          "volumeMq": {
+            "type": "number"
+          },
+          "meseSeminaMin": {
+            "type": "string"
+          },
+          "meseSeminaMax": {
+            "type": "string"
+          }
+        }
+      },
+      "FatturatoDTO": {
+        "type": "object",
+        "properties": {
+          "idFatturato": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "annoRiferimento": {
+            "type": "string"
+          },
+          "ricaviVendita": {
+            "type": "number"
+          },
+          "speseGenerali": {
+            "type": "number"
+          },
+          "interessiAttivi": {
+            "type": "number"
+          },
+          "interessiPassivi": {
+            "type": "number"
+          },
+          "idParticellaParticella": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ColturaDTO": {
+        "type": "object",
+        "properties": {
+          "idColtura": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "prezzoKg": {
+            "type": "number"
+          },
+          "dataSemina": {
+            "type": "string",
+            "format": "date"
+          },
+          "dataRaccolto": {
+            "type": "string",
+            "format": "date"
+          },
+          "nomeOrtaggio": {
+            "type": "string"
+          }
+        }
+      },
+      "AmbienteDTO": {
+        "type": "object",
+        "properties": {
+          "idAmbiente": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "temperaturaMedia": {
+            "type": "number"
+          },
+          "umiditaMedia": {
+            "type": "number"
+          },
+          "precipitazioni": {
+            "type": "number"
+          },
+          "irraggiamentoMedio": {
+            "type": "number"
+          },
+          "ombreggiamentoMedio": {
+            "type": "number"
+          },
+          "dataRilevazione": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}
