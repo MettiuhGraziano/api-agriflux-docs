@@ -10,7 +10,7 @@ window.onload = function () {
                 url: "../api-web-docs.json",
                 name: "Service Web v1"
             }
-        ]
+        ],
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
