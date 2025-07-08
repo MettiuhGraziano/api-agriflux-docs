@@ -4,7 +4,7 @@ window.onload = function () {
     // the following lines will be replaced by docker/configurator, when it runs in a docker-container
     window.ui = SwaggerUIBundle({
         urls: [{
-                url: "../api-batch-docs,json",
+                url: "../api-batch-docs.json",
                 name: "Service Batch v1"
             }, {
                 url: "../api-web-docs.json",
